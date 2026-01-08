@@ -75,7 +75,7 @@ body {
 .animate-scroll {
   display: flex;
   width: max-content;
-  animation: scroll 60s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 .animate-scroll:hover {
   animation-play-state: paused;

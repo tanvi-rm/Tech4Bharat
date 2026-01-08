@@ -33,7 +33,7 @@ export default function Header() {
             className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">Previous Activities</a>
 
           <a
-            href="#"
+            href="/our-workshop"
             className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">Our Workshops</a>
 
           <a

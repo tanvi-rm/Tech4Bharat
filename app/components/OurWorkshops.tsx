@@ -1,5 +1,5 @@
 const GovernanceIcon = () => (
-  <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="9" />
     <path d="M3 12h18" />
@@ -11,7 +11,7 @@ const GovernanceIcon = () => (
 );
 
 const AIIcon = () => (
-  <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z" />
     <circle cx="12" cy="11" r="2" />
@@ -20,16 +20,15 @@ const AIIcon = () => (
 );
 
 const CyberIcon = () => (
-  <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z" />
     <path d="M13 9l-3 5h3l-1 4" />
   </svg>
 );
 
-
 const StrategyIcon = () => (
-  <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="6" cy="12" r="2" />
     <circle cx="12" cy="6" r="2" />
@@ -38,100 +37,78 @@ const StrategyIcon = () => (
     <path d="M8 12h4M12 8v4M14 12h4M12 14v4" />
   </svg>
 );
-
-
 export default function OurWorkshop() {
   return (
-    <section className="relative py-25">
-      {/* Main Container */}
-      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl px-12 py-15">
+    <section className="relative py-20 sm:py-28">
+      {/* MAIN CONTAINER */}
+      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl
+                      px-6 sm:px-10 lg:px-12 py-16">
 
-        {/* Section Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#d476c6]">
+        {/* SECTION HEADER */}
+        <div className="text-center mb-12 sm:mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
             Our Workshop
           </h2>
-          <p className="mt-3 text-gray-600 text-lg">
+          <p className="mt-3 text-gray-600 text-base sm:text-lg">
             Highlights from our recently conducted workshop.
           </p>
         </div>
 
-        {/* Content Grid */}
-        {/* Inner Content Container */}
-
+        {/* INNER CONTENT CONTAINER */}
         <div className="
-        bg-[#faf7fc] rounded-2xl px-10 py-12
-        shadow-inner
-        transition-all duration-300 ease-out
-        hover:shadow-2xl
-        hover:-translate-y-1
+          bg-[#faf7fc] rounded-2xl
+          px-6 sm:px-10 py-10 sm:py-12
+          shadow-inner
+          transition-all duration-300 ease-out
+          hover:shadow-2xl
+          sm:hover:-translate-y-1
         ">
 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
 
-  {/* Content Grid */}
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            {/* LEFT CONTENT */}
+            <div>
+              <h3 className="text-xl sm:text-2xl font-semibold text-[#5e226d] mb-4">
+                Digital & Tech Policy Workshop
+              </h3>
 
+              <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
+                A focused workshop that introduced students to the real-world
+                intersection of technology, policy, and governance through expert
+                discussions and practical learning experiences.
+              </p>
 
-          {/* LEFT CONTENT */}
-          <div>
-            <h3 className="text-2xl font-semibold text-[#5e226d] mb-4">
-              Digital & Tech Policy Workshop
-            </h3>
+              <ul className="space-y-3 text-gray-700 text-sm sm:text-base">
+                <li>• Technology & Public Policy Foundations</li>
+                <li>• AI, Data Governance & Cybersecurity</li>
+                <li>• Innovation, Strategy & Policy Thinking</li>
+                <li>• Real-World Case Studies & Simulations</li>
+              </ul>
+            </div>
 
-            <p className="text-gray-700 leading-relaxed mb-6">
-              A focused workshop that introduced students to the real-world
-              intersection of technology, policy, and governance through expert
-              discussions and practical learning experiences.
-            </p>
+            {/* RIGHT ICON GRID */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                { title: "Digital Governance & DPI", icon: <GovernanceIcon /> },
+                { title: "AI & Emerging Tech Policies", icon: <AIIcon /> },
+                { title: "Cyber-Physical & Energy Systems", icon: <CyberIcon /> },
+                { title: "Technostrategic Decision Making", icon: <StrategyIcon /> },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl p-6 text-center text-white shadow-md
+                             bg-gradient-to-br from-[#ac84b6] to-[#d476c6]"
+                >
+                  <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center text-white/90">
+                    {item.icon}
+                  </div>
 
-            <ul className="space-y-3 text-gray-700">
-              <li>• Technology & Public Policy Foundations</li>
-              <li>• AI, Data Governance & Cybersecurity</li>
-              <li>• Innovation, Strategy & Policy Thinking</li>
-              <li>• Real-World Case Studies & Simulations</li>
-            </ul>
-          </div>
-
-          {/* RIGHT ICON GRID */}
-          <div className="grid grid-cols-2 gap-6">
-
-            {[
-                {
-                    title: "Digital Governance & DPI",
-                    icon: <GovernanceIcon />,
-                },
-                {
-                    title: "AI & Emerging Tech Policies",
-                    icon: <AIIcon />,
-                },
-                {
-                    title: "Cyber-Physical & Energy Systems",
-                    icon: <CyberIcon />,
-                },
-                {
-                    title: "Technostrategic Decision Making",
-                    icon: <StrategyIcon />,
-                },
-                ].map((item, index) => (
-
-              <div
-                key={index}
-                className="rounded-2xl p-6 text-center text-white shadow-md
-                           bg-gradient-to-br from-[#ac84b6] to-[#d476c6]"
-              >
-                {/* Icon Placeholder */}
-                <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center text-white/90">
-  {item.icon}
-</div>
-
-
-                <p className="text-sm font-medium leading-snug">
-                  {item.title}
-                </p>
-              </div>
-            ))}
-
-          </div>
+                  <p className="text-sm font-medium leading-snug">
+                    {item.title}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

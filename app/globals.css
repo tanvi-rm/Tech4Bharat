@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html, body {
+  overflow-x: hidden;
+}
+
 /* ===============================
    CSS VARIABLES
 ================================ */
@@ -81,3 +85,19 @@ body {
   animation-play-state: paused;
 }
 
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.auto-scroll {
+  animation: scroll-x 40s linear infinite;
+}
+
+.auto-scroll:hover {
+  animation-play-state: paused;
+}

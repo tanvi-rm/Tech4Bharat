@@ -58,25 +58,24 @@ const workshops = [
 
 export default function PreviousWorkshops() {
   return (
-    <section className="relative py-12.5">
-      {/* White Container */}
-      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl px-10 py-20 overflow-hidden">
+    <section className="relative py-13 sm:py-13">
+      {/* MAIN CONTAINER */}
+      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl
+                      px-6 sm:px-10 lg:px-12 py-16">
 
-        {/* Section Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#d476c6]">
+        {/* HEADER */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
             Previous Workshops
           </h2>
-          <p className="mt-3 text-gray-600 text-lg">
+          <p className="mt-3 text-gray-600 text-base sm:text-lg">
             A glimpse into the sessions and learning experiences from our workshop.
           </p>
         </div>
 
-        {/* Auto-Scrolling Gallery */}
-        <div className="relative px-6 overflow-hidden">
-          <div className="flex gap-8 animate-scroll">
-
-            {/* Render cards */}
+        {/* AUTO-SCROLL WRAPPER */}
+        <div className="relative overflow-hidden">
+          <div className="flex gap-6 animate-scroll">
             {[...workshops, ...workshops].map((item, index) => (
               <WorkshopCard
                 key={index}
@@ -85,15 +84,15 @@ export default function PreviousWorkshops() {
                 desc={item.desc}
               />
             ))}
-
           </div>
         </div>
+
       </div>
     </section>
   );
 }
 
-/* Individual Card */
+/* CARD */
 function WorkshopCard({
   img,
   title,
@@ -104,17 +103,20 @@ function WorkshopCard({
   desc: string;
 }) {
   return (
-    <div className="min-w-[300px] bg-white rounded-2xl shadow-lg overflow-hidden">
+    <div className="min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
+                    bg-white rounded-2xl shadow-lg overflow-hidden
+                    hover:shadow-xl transition">
       <img
         src={img}
         alt={title}
-        className="w-full h-70 object-cover"
+        className="w-full h-60 sm:h-48 lg:h-60 object-cover"
       />
-      <div className="p-5">
-        <h3 className="text-md font-semibold text-[#5e226d] mb-2">
+
+      <div className="p-4 sm:p-5">
+        <h3 className="text-sm sm:text-md font-semibold text-[#5e226d] mb-2">
           {title}
         </h3>
-        <p className="text-sm text-gray-600 leading-snug">
+        <p className="text-xs sm:text-sm text-gray-600 leading-snug">
           {desc}
         </p>
       </div>

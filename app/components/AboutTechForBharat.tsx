@@ -80,162 +80,163 @@ export const StrategyIcon = () => (
 
 export default function AboutTechForBharat() {
   return (
-    <section className="relative py-32">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="relative py-20 sm:py-28">
+      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl
+                      px-6 sm:px-10 lg:px-12 py-16">
 
-        {/* MAIN CONTAINER */}
-        <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-12 space-y-15">
-
-        {/* Section Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#d476c6]">
+        {/* SECTION HEADER */}
+        <div className="text-center mb-12 sm:mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
             About Tech For Bharat
           </h2>
-          <p className="mt-3 text-gray-600 text-lg">
+          <p className="mt-3 text-gray-600 text-base sm:text-lg">
             Empowering India’s youth with cutting-edge technology skill
           </p>
         </div>
 
-          {/* ================= WHO WE ARE ================= */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        {/* WHO WE ARE */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-20">
 
-            {/* LEFT */}
-            <div>
-              <h2 className="text-3xl font-bold text-[#5e226d] mb-4">
-                Who We Are
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Tech For Bharat is a national initiative focused on building a
-                future-ready generation equipped to navigate and lead in an
-                increasingly technology-driven world.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                We work at the intersection of technology, governance, and
-                innovation to empower young minds with practical knowledge and
-                strategic thinking.
-              </p>
-            </div>
-
-            {/* RIGHT INFO CARDS */}
-            <div className="space-y-6">
-              {[
-                {
-                  title: "National Initiative",
-                  desc: "Driving awareness and capability-building through a technology-first national vision.",
-                  icon: <NationalInitiativeIcon />,
-                },
-                {
-                  title: "Multi-disciplinary Learning",
-                  desc: "Blending technology, policy, security, and innovation for holistic growth.",
-                  icon: <MultidisciplinaryIcon />,
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-md"
-                >
-                  <div className="w-10 h-10 rounded-full bg-[#d476c6]/20 flex items-center justify-center text-[#d476c6]">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#5e226d]">
-                      {item.title}
-                    </h4>
-                    <p className="text-sm text-gray-600 mt-1">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#5e226d] mb-4">
+              Who We Are
+            </h3>
+            <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
+              Tech For Bharat is a national initiative focused on building a
+              future-ready generation equipped to navigate and lead in an
+              increasingly technology-driven world.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+              We work at the intersection of technology, governance, and
+              innovation to empower young minds with practical knowledge and
+              strategic thinking.
+            </p>
           </div>
 
-          {/* ================= WHAT WE DO ================= */}
-          <div>
-            <h2 className="text-3xl font-bold text-[#5e226d] mb-10">
-              What We Do
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { title: "Emerging Technologies", icon: <EmergingTechIcon /> },
-                { title: "AI & Machine Learning", icon: <AIIcon /> },
-                { title: "Cyber & Digital Defence", icon: <CyberDefenceIcon /> },
-                { title: "National Security Technologies", icon: <NationalSecurityIcon /> },
-                { title: "Tech Governance & Policy", icon: <TechPolicyIcon /> },
-                { title: "Strategic Innovation", icon: <StrategyIcon /> },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition hover:-translate-y-1 text-center"
-                >
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#ac84b6] to-[#d476c6] flex items-center justify-center text-white">
-                    {item.icon}
-                  </div>
+          <div className="space-y-6">
+            {[
+              {
+                title: "National Initiative",
+                desc: "Driving awareness and capability-building through a technology-first national vision.",
+                icon: <NationalInitiativeIcon />,
+              },
+              {
+                title: "Multi-disciplinary Learning",
+                desc: "Blending technology, policy, security, and innovation for holistic growth.",
+                icon: <MultidisciplinaryIcon />,
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br
+                           from-purple-50 to-pink-50 shadow-md"
+              >
+                <div className="w-10 h-10 rounded-full bg-[#d476c6]/20
+                                flex items-center justify-center text-[#d476c6]">
+                  {item.icon}
+                </div>
+                <div>
                   <h4 className="font-semibold text-[#5e226d]">
                     {item.title}
                   </h4>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* WHAT WE DO */}
+        <div className="mb-20">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#5e226d] mb-10">
+            What We Do
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { title: "Emerging Technologies", icon: <EmergingTechIcon /> },
+              { title: "AI & Machine Learning", icon: <AIIcon /> },
+              { title: "Cyber & Digital Defence", icon: <CyberDefenceIcon /> },
+              { title: "National Security Technologies", icon: <NationalSecurityIcon /> },
+              { title: "Tech Governance & Policy", icon: <TechPolicyIcon /> },
+              { title: "Strategic Innovation", icon: <StrategyIcon /> },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-6 shadow-md
+                           hover:shadow-xl transition hover:-translate-y-1 text-center"
+              >
+                <div className="w-14 h-14 mx-auto mb-4 rounded-xl
+                                bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
+                                flex items-center justify-center text-white">
+                  {item.icon}
+                </div>
+                <h4 className="font-semibold text-[#5e226d] text-sm sm:text-base">
+                  {item.title}
+                </h4>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* KEY FOCUS + APPROACH */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14">
+
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-[#5e226d] mb-6">
+              Key Focus Areas
+            </h3>
+
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { code: "AI", label: "Artificial Intelligence" },
+                { code: "CT", label: "Cyber Technologies" },
+                { code: "TP", label: "Tech Policy" },
+                { code: "EI", label: "Equity & Inclusion" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="rounded-xl p-5 bg-purple-50 text-center shadow-sm"
+                >
+                  <div className="text-2xl font-bold text-[#ac84b6]">
+                    {item.code}
+                  </div>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {item.label}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* ================= KEY FOCUS + APPROACH ================= */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-[#5e226d] mb-6">
+              Our Approach
+            </h3>
 
-            {/* KEY FOCUS AREAS */}
-            <div>
-              <h3 className="text-2xl font-semibold text-[#5e226d] mb-6">
-                Key Focus Areas
-              </h3>
-
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { code: "AI", label: "Artificial Intelligence" },
-                  { code: "CT", label: "Cyber Technologies" },
-                  { code: "TP", label: "Tech Policy" },
-                  { code: "EI", label: "Equity & Inclusion" },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl p-5 bg-purple-50 text-center shadow-sm"
-                  >
-                    <div className="text-2xl font-bold text-[#ac84b6]">
-                      {item.code}
-                    </div>
-                    <p className="text-sm text-gray-600 mt-1">
-                      {item.label}
-                    </p>
+            <ul className="space-y-5">
+              {[
+                "Comprehensive Learning Platform",
+                "Industry & Academic Collaboration",
+                "Future-Ready Skill Development",
+                "Innovation & Policy Thinking",
+              ].map((item, i) => (
+                <li key={i} className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#d476c6]
+                                  text-white flex items-center justify-center font-semibold">
+                    {i + 1}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* OUR APPROACH */}
-            <div>
-              <h3 className="text-2xl font-semibold text-[#5e226d] mb-6">
-                Our Approach
-              </h3>
-
-              <ul className="space-y-5">
-                {[
-                  "Comprehensive Learning Platform",
-                  "Industry & Academic Collaboration",
-                  "Future-Ready Skill Development",
-                  "Innovation & Policy Thinking",
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-[#d476c6] text-white flex items-center justify-center font-semibold">
-                      {i + 1}
-                    </div>
-                    <p className="text-gray-700">{item}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                  <p className="text-gray-700 text-sm sm:text-base">
+                    {item}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
-
         </div>
+
       </div>
     </section>
   );

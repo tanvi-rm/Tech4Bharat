@@ -1,4 +1,5 @@
 import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 
 /* -----------------------------
    IMAGE DATA (slider)
@@ -338,9 +339,10 @@ export default function OurPreviousWorkshopPage() {
     </div>
 
   </div>
+  
 </section>
 
-
+<Footer />
       </main>
 
     </>

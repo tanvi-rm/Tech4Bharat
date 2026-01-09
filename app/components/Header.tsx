@@ -51,7 +51,7 @@ export default function Header() {
           {[
             { name: "Home", href: "/" },
             { name: "About Us", href: "/about-us" },
-            { name: "Previous Activities", href: "#" },
+            { name: "Previous Activities", href: "/previous-activities" },
             { name: "Our Workshops", href: "/our-workshop" },
             { name: "Contact Us", href: "/contact" },
           ].map((item) => (
@@ -109,7 +109,7 @@ export default function Header() {
           {[
             { name: "Home", href: "/" },
             { name: "About Us", href: "/about-us" },
-            { name: "Previous Activities", href: "#" },
+            { name: "Previous Activities", href: "/previous-activities" },
             { name: "Our Workshops", href: "/our-workshop" },
             { name: "Contact Us", href: "/contact" },
           ].map((item) => (
@@ -129,8 +129,6 @@ export default function Header() {
         </nav>
       </div>
 
-
-      
     </header>
   );
 }

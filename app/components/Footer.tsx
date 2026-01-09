@@ -56,7 +56,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-[#8b3fae] hover:underline underline-offset-4 transition">
+                <Link href="/previous-activities#internship" className="hover:text-[#8b3fae] hover:underline underline-offset-4 transition">
                   Internship
                 </Link>
               </li>

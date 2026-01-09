@@ -46,7 +46,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="min-h-screen py-24 px-6">
+    <section className="min-h-screen pt-24 px-6">
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}
@@ -55,7 +55,7 @@ export default function ContactUs() {
             Contact Us
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-gray-700 text-lg">
-            Have a question or would like to collaborate?  
+            Have a question or would like to collaborate?
             Share your details and we’ll get back to you.
           </p>
         </div>

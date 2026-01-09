@@ -116,235 +116,235 @@ export default function OurPreviousWorkshopPage() {
         {/* =======================
     WORKSHOP JOURNEY (GRID CARD)
 ======================= */}
-<section className="max-w-6xl mx-auto px-8 mb-28">
-  <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-12">
+        <section className="max-w-6xl mx-auto px-8 mb-28">
+          <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-12">
 
-    {/* Section Header INSIDE CARD */}
-    <div className="text-center mb-12">
-      <h2 className="text-3xl font-semibold text-[#d476c6]">
-        Workshop Journey: Day-wise Summary
-      </h2>
-      <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-        A brief overview of the key themes and activities covered across each day of the workshop.
-      </p>
-    </div>
+            {/* Section Header INSIDE CARD */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-semibold text-[#d476c6]">
+                Workshop Journey: Day-wise Summary
+              </h2>
+              <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+                A brief overview of the key themes and activities covered across each day of the workshop.
+              </p>
+            </div>
 
-    {/* Grid of Day Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {dayWiseSummary.map((item, index) => (
-        <div
-          key={index}
-          className="
+            {/* Grid of Day Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {dayWiseSummary.map((item, index) => (
+                <div
+                  key={index}
+                  className="
             bg-white rounded-2xl p-6 shadow-md
             transition-all duration-300 ease-out
             hover:shadow-2xl hover:-translate-y-2
           "
-        >
-          {/* Day Badge */}
-          <div
-            className="
+                >
+                  {/* Day Badge */}
+                  <div
+                    className="
               w-12 h-12 mb-4 flex items-center justify-center
               rounded-xl font-bold text-white text-lg
               bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
             "
-          >
-            {index + 1}
+                  >
+                    {index + 1}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-[#5e226d] mb-2">
+                    {item.day} – {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
           </div>
-
-          {/* Title */}
-          <h3 className="text-lg font-semibold text-[#5e226d] mb-2">
-            {item.day} – {item.title}
-          </h3>
-
-          {/* Description */}
-          <p className="text-sm text-gray-700 leading-relaxed">
-            {item.desc}
-          </p>
-        </div>
-      ))}
-    </div>
-
-  </div>
-</section>
+        </section>
 
 
         {/* =======================
     EVENT OVERVIEW + ORGANIZERS
 ======================= */}
-<section className="max-w-6xl mx-auto px-8 mb-28">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <section className="max-w-6xl mx-auto px-8 mb-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-    {/* Event Overview Card */}
-    <div
-      className="
+            {/* Event Overview Card */}
+            <div
+              className="
         bg-white/90 backdrop-blur rounded-3xl p-10 shadow-xl
         transition-all duration-300 ease-out
         hover:shadow-2xl hover:-translate-y-1
       "
-    >
-      <h2 className="text-3xl font-semibold text-[#d476c6] mb-4">
-        Event Overview
-      </h2>
+            >
+              <h2 className="text-3xl font-semibold text-[#d476c6] mb-4">
+                Event Overview
+              </h2>
 
-      <p className="text-gray-700 leading-relaxed">
-        The Digital & Tech Policy Workshop was designed to introduce students to
-        the evolving relationship between technology, governance, and policy-making.
-        The program focused on building awareness of how emerging technologies
-        influence decision-making, regulation, and national strategy through
-        expert-led discussions and applied learning.
-      </p>
-    </div>
+              <p className="text-gray-700 leading-relaxed">
+                The Digital & Tech Policy Workshop was designed to introduce students to
+                the evolving relationship between technology, governance, and policy-making.
+                The program focused on building awareness of how emerging technologies
+                influence decision-making, regulation, and national strategy through
+                expert-led discussions and applied learning.
+              </p>
+            </div>
 
-    {/* Organizers & Knowledge Partners Card */}
-    <div
-      className="
+            {/* Organizers & Knowledge Partners Card */}
+            <div
+              className="
         bg-white/90 backdrop-blur rounded-3xl p-10 shadow-xl
         transition-all duration-300 ease-out
         hover:shadow-2xl hover:-translate-y-1
       "
-    >
-      <h2 className="text-3xl font-semibold text-[#d476c6] mb-4">
-        Organizers & Knowledge Partners
-      </h2>
+            >
+              <h2 className="text-3xl font-semibold text-[#d476c6] mb-4">
+                Organizers & Knowledge Partners
+              </h2>
 
-      {/* Organized By */}
-      <div className="mb-6">
-        <h3 className="text-sm font-semibold text-[#5e226d] mb-3 uppercase tracking-wide">
-          Organized By
-        </h3>
-        <ul className="space-y-2 text-gray-700">
-          <li>• COEP Technological University, Pune</li>
-          <li>• Veermata Jijabai Technological Institute (VJTI), Mumbai</li>
-        </ul>
-      </div>
+              {/* Organized By */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-[#5e226d] mb-3 uppercase tracking-wide">
+                  Organized By
+                </h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• COEP Technological University, Pune</li>
+                  <li>• Veermata Jijabai Technological Institute (VJTI), Mumbai</li>
+                </ul>
+              </div>
 
-      {/* Knowledge Partners */}
-      <div>
-        <h3 className="text-sm font-semibold text-[#5e226d] mb-3 uppercase tracking-wide">
-          Knowledge Partners
-        </h3>
-        <ul className="space-y-2 text-gray-700">
-          <li>• CDTIES, IIT Bombay</li>
-          <li>• Observer Research Foundation</li>
-        </ul>
-      </div>
-    </div>
+              {/* Knowledge Partners */}
+              <div>
+                <h3 className="text-sm font-semibold text-[#5e226d] mb-3 uppercase tracking-wide">
+                  Knowledge Partners
+                </h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• CDTIES, IIT Bombay</li>
+                  <li>• Observer Research Foundation</li>
+                </ul>
+              </div>
+            </div>
 
-  </div>
-</section>
+          </div>
+        </section>
 
-{/* =======================
+        {/* =======================
     WORKSHOP THEMES & FOCUS AREAS
 ======================= */}
-<section className="max-w-6xl mx-auto px-8 mb-28">
-  <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-12">
+        <section className="max-w-6xl mx-auto px-8 mb-28">
+          <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-12">
 
-    {/* Header */}
-    <div className="text-center mb-12">
-      <h2 className="text-3xl font-semibold text-[#d476c6]">
-        Workshop Themes & Focus Areas
-      </h2>
-      <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-        Key thematic areas explored during the workshop.
-      </p>
-    </div>
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-semibold text-[#d476c6]">
+                Workshop Themes & Focus Areas
+              </h2>
+              <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+                Key thematic areas explored during the workshop.
+              </p>
+            </div>
 
-    {/* Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[
-        "Technology policy frameworks and governance structures",
-        "AI, data governance, and cybersecurity policy considerations",
-        "Innovation management and strategic technology planning",
-        "Emerging domains including space policy, clean energy, and digital assets",
-        "Policy drafting, simulations, and real-world case discussions",
-      ].map((text, index) => (
-        <div
-          key={index}
-          className="
+            {/* Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                "Technology policy frameworks and governance structures",
+                "AI, data governance, and cybersecurity policy considerations",
+                "Innovation management and strategic technology planning",
+                "Emerging domains including space policy, clean energy, and digital assets",
+                "Policy drafting, simulations, and real-world case discussions",
+              ].map((text, index) => (
+                <div
+                  key={index}
+                  className="
             bg-white rounded-2xl p-6 shadow-md
             transition-all duration-300 ease-out
             hover:shadow-2xl hover:-translate-y-2
             flex items-start gap-4
           "
-        >
-          <div className="
+                >
+                  <div className="
             w-10 h-10 rounded-xl flex items-center justify-center
             text-white font-semibold
             bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
             flex-shrink-0
           ">
-            {index + 1}
+                    {index + 1}
+                  </div>
+
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {text}
+                  </p>
+                </div>
+              ))}
+            </div>
+
           </div>
-
-          <p className="text-sm text-gray-700 leading-relaxed">
-            {text}
-          </p>
-        </div>
-      ))}
-    </div>
-
-  </div>
-</section>
+        </section>
 
 
 
         {/* =======================
     WORKSHOP OUTCOMES & IMPACT
 ======================= */}
-<section className="max-w-6xl mx-auto px-8 mb-32">
-  <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-12">
+        <section className="max-w-6xl mx-auto px-8 mb-32">
+          <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-12">
 
-    {/* Header */}
-    <div className="text-center mb-12">
-      <h2 className="text-3xl font-semibold text-[#d476c6]">
-        Workshop Outcomes & Impact
-      </h2>
-      <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-        Key takeaways and learning outcomes from the workshop.
-      </p>
-    </div>
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-semibold text-[#d476c6]">
+                Workshop Outcomes & Impact
+              </h2>
+              <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+                Key takeaways and learning outcomes from the workshop.
+              </p>
+            </div>
 
-    {/* Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[
-        "Developed a foundational understanding of digital and technology policy frameworks",
-        "Explored the role of AI, data governance, and cybersecurity in modern governance",
-        "Gained exposure to real-world policy challenges through case studies and simulations",
-        "Understood the connection between innovation, strategy, and national decision-making",
-        "Experienced practical learning through expert sessions and institutional field visits",
-      ].map((text, index) => (
-        <div
-          key={index}
-          className="
+            {/* Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                "Developed a foundational understanding of digital and technology policy frameworks",
+                "Explored the role of AI, data governance, and cybersecurity in modern governance",
+                "Gained exposure to real-world policy challenges through case studies and simulations",
+                "Understood the connection between innovation, strategy, and national decision-making",
+                "Experienced practical learning through expert sessions and institutional field visits",
+              ].map((text, index) => (
+                <div
+                  key={index}
+                  className="
             bg-white rounded-2xl p-6 shadow-md
             transition-all duration-300 ease-out
             hover:shadow-2xl hover:-translate-y-2
             flex items-start gap-4
           "
-        >
-          <div className="
+                >
+                  <div className="
             w-10 h-10 rounded-xl flex items-center justify-center
             text-white font-semibold
             bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
             flex-shrink-0
           ">
-            ✓
+                    ✓
+                  </div>
+
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {text}
+                  </p>
+                </div>
+              ))}
+            </div>
+
           </div>
 
-          <p className="text-sm text-gray-700 leading-relaxed">
-            {text}
-          </p>
-        </div>
-      ))}
-    </div>
+        </section>
 
-  </div>
-  
-</section>
 
-<Footer />
       </main>
-
+      <Footer />
     </>
   );
 }

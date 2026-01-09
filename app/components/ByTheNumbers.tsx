@@ -1,6 +1,6 @@
 export default function ByTheNumbers() {
   return (
-    <section className="relative py-13 sm:py-13">
+    <section className="relative py-15 sm:py-15">
       <div
         className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg
                    rounded-3xl shadow-xl

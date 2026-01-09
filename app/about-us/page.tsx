@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 interface StatProps {
-  icon: ReactNode;
+  icon?: ReactNode;
   value: string;
   label: string;
 }
@@ -170,14 +170,17 @@ export default function AboutUsPage() {
 function Stat({ icon, value, label }: StatProps) {
   return (
     <div>
-      <div className="flex justify-center mb-2 text-[#d476c6]">
-        {icon}
-      </div>
+      {icon && (
+        <div className="flex justify-center mb-2 text-[#d476c6]">
+          {icon}
+        </div>
+      )}
       <p className="text-2xl font-bold text-[#d476c6]">{value}</p>
       <p className="text-sm text-gray-600">{label}</p>
     </div>
   );
 }
+
 
 
 function Pillar({ icon, title, desc }: PillarProps) {

@@ -39,7 +39,7 @@ const StrategyIcon = () => (
 );
 export default function OurWorkshop() {
   return (
-    <section className="relative py-20 sm:py-28">
+    <section className="relative py-15 sm:py-15">
       {/* MAIN CONTAINER */}
       <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl
                       px-6 sm:px-10 lg:px-12 py-16">

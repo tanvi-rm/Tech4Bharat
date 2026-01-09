@@ -39,15 +39,17 @@ export default function Hero() {
 
         <div className="fade-up-delay-2 mt-8 sm:mt-10">
           <button
-            className="border border-white
-                       px-8 sm:px-10
-                       py-4 sm:py-3
-                       rounded-full
-                       text-base sm:text-lg
-                       hover:bg-white hover:text-[#ac84b6]
-                       transition"
+            className="hero-btn border border-white
+           px-8 sm:px-10
+           py-4 sm:py-3
+           rounded-full
+           text-base sm:text-lg
+           transition-all duration-300
+           hover:bg-white hover:text-[#ac84b6]
+           hover:scale-105"
+
           >
-            Explore Workshops
+            Learn More
           </button>
         </div>
       </div>

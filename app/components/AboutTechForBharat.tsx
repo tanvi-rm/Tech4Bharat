@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect } from "react";
+
+
 /* ===============================
    ICONS
 ================================ */
@@ -79,8 +84,30 @@ export const StrategyIcon = () => (
 ================================ */
 
 export default function AboutTechForBharat() {
+  useEffect(() => {
+  const elements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // 🔥 IMPORTANT
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
+
   return (
-    <section className="relative py-20 sm:py-28">
+    
+    <section className="relative py-15 sm:py-15 reveal">
       <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl
                       px-6 sm:px-10 lg:px-12 py-16">
 
@@ -129,10 +156,10 @@ export default function AboutTechForBharat() {
               <div
                 key={i}
                 className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br
-                           from-purple-50 to-pink-50 shadow-md"
+                           from-purple-50 to-pink-50 shadow-md reveal delay-1"
               >
                 <div className="w-10 h-10 rounded-full bg-[#d476c6]/20
-                                flex items-center justify-center text-[#d476c6]">
+                                flex items-center justify-center text-[#d476c6] icon-animate">
                   {item.icon}
                 </div>
                 <div>
@@ -166,7 +193,7 @@ export default function AboutTechForBharat() {
               <div
                 key={i}
                 className="bg-white rounded-2xl p-6 shadow-md
-                           hover:shadow-xl transition hover:-translate-y-1 text-center"
+                           hover:shadow-xl transition hover:-translate-y-1 text-center reveal delay-2"
               >
                 <div className="w-14 h-14 mx-auto mb-4 rounded-xl
                                 bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
@@ -198,7 +225,10 @@ export default function AboutTechForBharat() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="rounded-xl p-5 bg-purple-50 text-center shadow-sm"
+                  className="rounded-xl p-5 bg-purple-50 text-center shadow-sm
+           transition-all duration-300
+           hover:-translate-y-1 hover:shadow-md reveal delay-3"
+
                 >
                   <div className="text-2xl font-bold text-[#ac84b6]">
                     {item.code}

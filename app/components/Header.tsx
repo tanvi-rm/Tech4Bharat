@@ -43,7 +43,7 @@ export default function Header() {
             className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">Home</a>
 
           <a
-            href="#"
+            href="/about-us"
             className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#ac84b6] after:transition-all after:duration-300 hover:after:w-full">About Us</a>
 
           <a

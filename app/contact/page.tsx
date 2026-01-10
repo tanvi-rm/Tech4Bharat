@@ -9,7 +9,6 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-
       <ContactUs />
       <Footer />
     </>

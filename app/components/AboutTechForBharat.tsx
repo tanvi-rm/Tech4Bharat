@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 
-
 /* ===============================
    ICONS
 ================================ */
@@ -84,36 +83,45 @@ export const StrategyIcon = () => (
 ================================ */
 
 export default function AboutTechForBharat() {
+
   useEffect(() => {
-  const elements = document.querySelectorAll(".reveal");
+    const elements = document.querySelectorAll(".reveal");
 
-  const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-        observer.unobserve(entry.target); // 🔥 IMPORTANT
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-
-  elements.forEach((el) => observer.observe(el));
-
-  return () => observer.disconnect();
-}, []);
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    
     <section className="relative py-15 sm:py-15 reveal">
-      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl
-                      px-6 sm:px-10 lg:px-12 py-16">
+      <div
+        className="
+          max-w-6xl mx-auto
+          bg-gradient-to-b from-[#edeef8] to-[#c5d1ff]
+          backdrop-blur-lg
+          rounded-3xl shadow-xl
+          px-6 sm:px-10 lg:px-12 py-16
+        "
+      >
 
-        {/* SECTION HEADER */}
-        <div className="text-center mb-12 sm:mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
+        {/* HEADER */}
+        <div className="text-center mb-14">
+          <h2 className="
+            text-3xl sm:text-4xl font-bold
+            bg-gradient-to-r from-[#020024] via-[#090979] to-[#00D4FF]
+            bg-clip-text text-transparent
+          ">
             About Tech For Bharat
           </h2>
           <p className="mt-3 text-gray-600 text-base sm:text-lg">
@@ -122,21 +130,20 @@ export default function AboutTechForBharat() {
         </div>
 
         {/* WHO WE ARE */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-20">
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-[#5e226d] mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4
+              bg-gradient-to-r from-[#020024] to-[#4f6ff2]
+              bg-clip-text text-transparent">
               Who We Are
             </h3>
-            <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-              Tech For Bharat is a national initiative focused on building a
-              future-ready generation equipped to navigate and lead in an
-              increasingly technology-driven world.
+
+            <p className="text-gray-700 mb-4">
+              Tech For Bharat is a national initiative focused on building a future-ready generation.
             </p>
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              We work at the intersection of technology, governance, and
-              innovation to empower young minds with practical knowledge and
-              strategic thinking.
+
+            <p className="text-gray-700">
+              We work at the intersection of technology, governance, and innovation.
             </p>
           </div>
 
@@ -144,31 +151,25 @@ export default function AboutTechForBharat() {
             {[
               {
                 title: "National Initiative",
-                desc: "Driving awareness and capability-building through a technology-first national vision.",
+                desc: "Driving awareness and capability-building through a technology-first vision.",
                 icon: <NationalInitiativeIcon />,
               },
               {
                 title: "Multi-disciplinary Learning",
-                desc: "Blending technology, policy, security, and innovation for holistic growth.",
+                desc: "Blending technology, policy, security, and innovation.",
                 icon: <MultidisciplinaryIcon />,
               },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br
-                           from-purple-50 to-pink-50 shadow-md reveal delay-1"
-              >
-                <div className="w-10 h-10 rounded-full bg-[#d476c6]/20
-                                flex items-center justify-center text-[#d476c6] icon-animate">
+              <div key={i}
+                className="flex gap-4 p-6 bg-white/60 backdrop-blur-lg rounded-2xl shadow-md">
+                <div className="w-10 h-10 rounded-full
+                  bg-gradient-to-br from-[#4f6ff2] to-[#8fa8ff]
+                  flex items-center justify-center text-white">
                   {item.icon}
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#5e226d]">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {item.desc}
-                  </p>
+                  <h4 className="font-semibold text-[#020024]">{item.title}</h4>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -177,11 +178,13 @@ export default function AboutTechForBharat() {
 
         {/* WHAT WE DO */}
         <div className="mb-20">
-          <h3 className="text-xl sm:text-2xl font-bold text-[#5e226d] mb-10">
+          <h3 className="text-xl sm:text-2xl font-bold mb-10
+            bg-gradient-to-r from-[#020024] to-[#4f6ff2]
+            bg-clip-text text-transparent">
             What We Do
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "Emerging Technologies", icon: <EmergingTechIcon /> },
               { title: "AI & Machine Learning", icon: <AIIcon /> },
@@ -190,17 +193,14 @@ export default function AboutTechForBharat() {
               { title: "Tech Governance & Policy", icon: <TechPolicyIcon /> },
               { title: "Strategic Innovation", icon: <StrategyIcon /> },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl p-6 shadow-md
-                           hover:shadow-xl transition hover:-translate-y-1 text-center reveal delay-2"
-              >
+              <div key={i}
+                className="bg-white/60 rounded-2xl p-6 text-center shadow-md">
                 <div className="w-14 h-14 mx-auto mb-4 rounded-xl
-                                bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
-                                flex items-center justify-center text-white">
+                  bg-gradient-to-br from-[#4f6ff2] to-[#8fa8ff]
+                  flex items-center justify-center text-white">
                   {item.icon}
                 </div>
-                <h4 className="font-semibold text-[#5e226d] text-sm sm:text-base">
+                <h4 className="font-semibold text-[#020024] text-sm">
                   {item.title}
                 </h4>
               </div>
@@ -209,10 +209,13 @@ export default function AboutTechForBharat() {
         </div>
 
         {/* KEY FOCUS + APPROACH */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-30">
 
+          {/* KEY FOCUS */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-semibold text-[#5e226d] mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6
+              bg-gradient-to-r from-[#020024] to-[#4f6ff2]
+              bg-clip-text text-transparent">
               Key Focus Areas
             </h3>
 
@@ -223,26 +226,22 @@ export default function AboutTechForBharat() {
                 { code: "TP", label: "Tech Policy" },
                 { code: "EI", label: "Equity & Inclusion" },
               ].map((item, i) => (
-                <div
-                  key={i}
-                  className="rounded-xl p-5 bg-purple-50 text-center shadow-sm
-           transition-all duration-300
-           hover:-translate-y-1 hover:shadow-md reveal delay-3"
-
-                >
-                  <div className="text-2xl font-bold text-[#ac84b6]">
+                <div key={i}
+                  className="p-5 rounded-xl bg-white/60 text-center shadow-sm">
+                  <div className="text-2xl font-bold text-[#4f6ff2]">
                     {item.code}
                   </div>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {item.label}
-                  </p>
+                  <p className="text-sm text-gray-600">{item.label}</p>
                 </div>
               ))}
             </div>
           </div>
 
+          {/* APPROACH */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-semibold text-[#5e226d] mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6
+              bg-gradient-to-r from-[#020024] to-[#4f6ff2]
+              bg-clip-text text-transparent">
               Our Approach
             </h3>
 
@@ -254,19 +253,18 @@ export default function AboutTechForBharat() {
                 "Innovation & Policy Thinking",
               ].map((item, i) => (
                 <li key={i} className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#d476c6]
-                                  text-white flex items-center justify-center font-semibold">
+                  <div className="w-8 h-8 rounded-full
+                    bg-gradient-to-br from-[#4f6ff2] to-[#8fa8ff]
+                    text-white flex items-center justify-center font-semibold">
                     {i + 1}
                   </div>
-                  <p className="text-gray-700 text-sm sm:text-base">
-                    {item}
-                  </p>
+                  <p className="text-gray-700">{item}</p>
                 </li>
               ))}
             </ul>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
   );

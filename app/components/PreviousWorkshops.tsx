@@ -67,41 +67,45 @@ const workshops = [
 
 export default function PreviousWorkshops() {
   return (
-    /* SECTION WRAPPER */
     <section className="relative py-15 sm:py-15 reveal">
 
       {/* MAIN GLASS CONTAINER */}
       <div
-        className="max-w-6xl mx-auto
-                   bg-white/90 backdrop-blur-lg
-                   rounded-3xl shadow-xl
-                   px-6 sm:px-10 lg:px-12
-                   py-16"
+        className="
+          max-w-6xl mx-auto
+          bg-gradient-to-b
+          from-[#edeef8]
+          to-[#c5d1ff]
+          backdrop-blur-lg
+          rounded-3xl shadow-xl
+          px-6 sm:px-10 lg:px-12
+          py-16
+        "
       >
 
-        {/* ===============================
-            SECTION HEADER
-        ================================ */}
+        {/* SECTION HEADER */}
         <div className="text-center mb-12 reveal delay-1">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
+          <h2
+            className="
+              text-3xl sm:text-4xl font-bold
+              bg-gradient-to-r
+              from-[#020024]
+              via-[#090979]
+              to-[#00D4FF]
+              bg-clip-text text-transparent
+            "
+          >
             Previous Workshops
           </h2>
+
           <p className="mt-3 text-gray-600 text-base sm:text-lg">
             A glimpse into the sessions and learning experiences from our workshop.
           </p>
         </div>
 
-
-        {/* ===============================
-            AUTO-SCROLL STRIP
-            - Horizontal movement only
-            - No vertical scrolling
-            - Pauses on hover
-        ================================ */}
+        {/* AUTO-SCROLL STRIP */}
         <div className="relative overflow-hidden reveal delay-2">
           <div className="flex gap-6 animate-scroll">
-
-            {/* Duplicate list for seamless infinite scroll */}
             {[...workshops, ...workshops].map((item, index) => (
               <WorkshopCard
                 key={index}
@@ -134,12 +138,15 @@ function WorkshopCard({
 }) {
   return (
     <div
-      className="min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
-                 bg-white rounded-2xl shadow-lg
-                 overflow-hidden
-                 transition
-                 hover:shadow-xl
-                 reveal delay-3"
+      className="
+        min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
+        bg-white/85 backdrop-blur-lg
+        rounded-2xl shadow-lg
+        overflow-hidden
+        transition
+        hover:shadow-xl hover:scale-[1.02]
+        reveal delay-3
+      "
     >
       {/* IMAGE */}
       <img
@@ -150,9 +157,18 @@ function WorkshopCard({
 
       {/* TEXT CONTENT */}
       <div className="p-4 sm:p-5">
-        <h3 className="text-sm sm:text-md font-semibold text-[#5e226d] mb-2">
+        <h3
+          className="
+            text-sm sm:text-md font-semibold mb-2
+            bg-gradient-to-r
+            from-[#4f6ff2]
+            to-[#8fa8ff]
+            bg-clip-text text-transparent
+          "
+        >
           {title}
         </h3>
+
         <p className="text-xs sm:text-sm text-gray-600 leading-snug">
           {desc}
         </p>

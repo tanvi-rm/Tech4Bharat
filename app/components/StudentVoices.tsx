@@ -76,23 +76,32 @@ const testimonials = [
 
 export default function StudentVoices() {
   return (
-    /* SECTION WRAPPER (Reveal Animation) */
     <section className="relative py-15 sm:py-15 reveal">
 
-      {/* GLASS CARD CONTAINER */}
+      {/* MAIN GLASS CONTAINER */}
       <div
-        className="max-w-6xl mx-auto
-                   bg-white/90 backdrop-blur-lg
-                   rounded-3xl shadow-xl
-                   px-6 sm:px-10 lg:px-12
-                   py-16"
+        className="
+          max-w-6xl mx-auto
+          bg-gradient-to-b from-[#edeef8] to-[#c5d1ff]
+          backdrop-blur-lg
+          rounded-3xl shadow-xl
+          px-6 sm:px-10 lg:px-12
+          py-16
+        "
       >
 
-        {/* ===============================
-            SECTION HEADER
-        ================================ */}
+        {/* SECTION HEADER */}
         <div className="text-center mb-12 sm:mb-14 reveal delay-1">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
+          <h2
+            className="
+              text-3xl sm:text-4xl font-bold
+              bg-gradient-to-r
+              from-[#020024]
+              via-[#090979]
+              to-[#4f6ff2]
+              bg-clip-text text-transparent
+            "
+          >
             Student Voices
           </h2>
 
@@ -102,61 +111,59 @@ export default function StudentVoices() {
           </p>
         </div>
 
-
-        {/* ===============================
-            HORIZONTAL SCROLL CONTAINER
-            - Horizontal scroll ENABLED
-            - Vertical scroll DISABLED
-            - Scrollbar HIDDEN
-        ================================ */}
+        {/* HORIZONTAL SCROLL CONTAINER */}
         <div
-          className="relative -mx-6 sm:-mx-10 lg:-mx-12
-                     reveal delay-2
-                     overflow-y-hidden"
+          className="
+            relative -mx-6 sm:-mx-10 lg:-mx-12
+            reveal delay-2
+            overflow-y-hidden
+          "
         >
           <div
-            className="flex gap-6
-                       px-6 sm:px-10 lg:px-12
-                       overflow-x-auto overflow-y-hidden
-                       scroll-smooth
-                       pb-6
-                       no-scrollbar"
+            className="
+              flex gap-6
+              px-6 sm:px-10 lg:px-12
+              overflow-x-auto overflow-y-hidden
+              scroll-smooth
+              pb-6
+              no-scrollbar
+            "
           >
-
-            {/* ===============================
-                TESTIMONIAL CARDS
-            ================================ */}
             {testimonials.map((item, index) => (
               <div
                 key={index}
-                className={`min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
-                            bg-white rounded-2xl p-6
-                            shadow-md
-                            hover:shadow-xl transition
-                            hover:-translate-y-1
-                            border border-transparent
-                            reveal delay-${(index % 4) + 1}`}
+                className={`
+                  min-w-[260px] sm:min-w-[300px] lg:min-w-[340px]
+                  bg-white/60 backdrop-blur-md
+                  rounded-2xl p-6
+                  shadow-md
+                  hover:shadow-xl transition
+                  hover:-translate-y-1
+                  border border-transparent
+                  reveal delay-${(index % 4) + 1}
+                `}
               >
-
                 {/* AVATAR */}
                 <div
-                  className="w-12 h-12 rounded-full
-                             bg-gradient-to-br from-[#ac84b6] to-[#d476c6]
-                             text-white font-semibold
-                             flex items-center justify-center
-                             mb-4"
+                  className="
+                    w-12 h-12 rounded-full
+                    bg-gradient-to-br from-[#4f6ff2] to-[#8fa8ff]
+                    text-white font-semibold
+                    flex items-center justify-center
+                    mb-4
+                  "
                 >
                   {item.avatar}
                 </div>
 
-                {/* TESTIMONIAL CONTENT */}
+                {/* CONTENT */}
                 <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
                   “{item.content}”
                 </p>
 
-                {/* FOOTER INFO */}
+                {/* FOOTER */}
                 <div className="border-t pt-4">
-                  <p className="font-semibold text-[#5e226d]">
+                  <p className="font-semibold text-[#020024]">
                     {item.name}
                   </p>
                   <p className="text-sm text-gray-500">
@@ -166,14 +173,10 @@ export default function StudentVoices() {
 
               </div>
             ))}
-
           </div>
         </div>
 
-
-        {/* ===============================
-            SCROLL HINT
-        ================================ */}
+        {/* SCROLL HINT */}
         <p className="text-center text-sm text-gray-400 mt-6 reveal delay-3">
           ← Scroll horizontally to read more student experiences →
         </p>

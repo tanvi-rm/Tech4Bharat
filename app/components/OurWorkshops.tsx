@@ -49,37 +49,47 @@ const StrategyIcon = () => (
 
 export default function OurWorkshop() {
   return (
-    /* SECTION WRAPPER */
     <section className="relative py-15 sm:py-15 reveal">
 
-      {/* MAIN GLASS CONTAINER */}
+      {/* MAIN CONTAINER */}
       <div
-        className="max-w-6xl mx-auto
-                   bg-white/90 backdrop-blur-lg
-                   rounded-3xl shadow-xl
-                   px-6 sm:px-10 lg:px-12
-                   py-16"
+        className="
+          max-w-6xl mx-auto
+          bg-white/90 backdrop-blur-lg
+          rounded-3xl shadow-xl
+          px-6 sm:px-10 lg:px-12
+          py-16
+          bg-gradient-to-b
+          from-[#edeef8]
+          to-[#c5d1ff]
+        "
       >
 
-        {/* ===============================
-            SECTION HEADER
-        ================================ */}
+        {/* SECTION HEADER */}
         <div className="text-center mb-12 sm:mb-14 reveal delay-1">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#d476c6]">
-            Our Workshop
+          <h2
+            className="
+              text-3xl sm:text-4xl font-bold
+              bg-gradient-to-r
+              from-[#020024]
+              via-[#090979]
+              to-[#00D4FF]
+              bg-clip-text text-transparent
+            "
+          >
+            Latest Workshop
           </h2>
+
           <p className="mt-3 text-gray-600 text-base sm:text-lg">
             Highlights from our recently conducted workshop.
           </p>
         </div>
 
-
-        {/* ===============================
-            INNER CONTENT CARD
-        ================================ */}
+        {/* INNER CONTENT CARD */}
         <div
           className="
-            bg-[#faf7fc] rounded-2xl
+            bg-[#eff0ff]
+            rounded-2xl
             px-6 sm:px-10 py-10 sm:py-12
             shadow-inner
             transition-all duration-300 ease-out
@@ -91,11 +101,18 @@ export default function OurWorkshop() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
 
-            {/* ===============================
-                LEFT CONTENT
-            ================================ */}
+            {/* LEFT CONTENT */}
             <div className="reveal delay-3">
-              <h3 className="text-xl sm:text-2xl font-semibold text-[#5e226d] mb-4">
+              <h3
+                className="
+                  text-xl sm:text-2xl font-semibold mb-4
+                  bg-gradient-to-r
+                  from-[#020024]
+                  via-[#090979]
+                  to-[#00D4FF]
+                  bg-clip-text text-transparent
+                "
+              >
                 Digital & Tech Policy Workshop
               </h3>
 
@@ -113,49 +130,38 @@ export default function OurWorkshop() {
               </ul>
             </div>
 
-          {/* RIGHT ICON GRID */}
-          <div className="grid grid-cols-2 gap-6">
+            {/* RIGHT ICON GRID */}
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { title: "Digital Governance & DPI", icon: <GovernanceIcon /> },
+                { title: "AI & Emerging Tech Policies", icon: <AIIcon /> },
+                { title: "Cyber-Physical & Energy Systems", icon: <CyberIcon /> },
+                { title: "Technostrategic Decision Making", icon: <StrategyIcon /> },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="
+                    rounded-2xl p-6 text-center text-white shadow-md
+                    bg-gradient-to-br
+                    from-[#4f6ff2]
+                    to-[#8fa8ff]
+                    hover:scale-[1.02]
+                    transition
+                  "
+                >
+                  <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center text-white/90">
+                    {item.icon}
+                  </div>
 
-            {[
-                {
-                    title: "Digital Governance & DPI",
-                    icon: <GovernanceIcon />,
-                },
-                {
-                    title: "AI & Emerging Tech Policies",
-                    icon: <AIIcon />,
-                },
-                {
-                    title: "Cyber-Physical & Energy Systems",
-                    icon: <CyberIcon />,
-                },
-                {
-                    title: "Technostrategic Decision Making",
-                    icon: <StrategyIcon />,
-                },
-                ].map((item, index) => (
+                  <p className="text-sm font-medium leading-snug">
+                    {item.title}
+                  </p>
+                </div>
+              ))}
+            </div>
 
-              <div
-                key={index}
-                className="rounded-2xl p-6 text-center text-white shadow-md
-                           bg-gradient-to-br from-[#ac84b6] to-[#d476c6]"
-              >
-                {/* Icon Placeholder */}
-                <div className="mx-auto mb-4 w-12 h-12 flex items-center justify-center text-white/90">
-  {item.icon}
-</div>
-
-
-                <p className="text-sm font-medium leading-snug">
-                  {item.title}
-                </p>
-              </div>
-            ))}
-
-          </div>
           </div>
         </div>
-
       </div>
     </section>
   );

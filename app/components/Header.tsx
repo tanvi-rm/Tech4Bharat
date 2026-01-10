@@ -9,8 +9,10 @@ export default function Header() {
   return (
     <header
       className="
-        w-full bg-[#fee4fe]/70 backdrop-blur-md
-        animate-header sticky top-0 z-50
+        w-full
+        bg-[#acc5fe]/70 backdrop-blur-md
+        animate-header
+        sticky top-0 z-50
       "
     >
       <div className="w-full px-6 md:px-8 py-4 flex items-center justify-between">
@@ -26,14 +28,16 @@ export default function Header() {
               group-hover:scale-110
             "
           />
+
+          {/* WEBSITE NAME – BLUE GRADIENT */}
           <span
             className="
               font-semibold tracking-wide
               text-lg sm:text-xl
               bg-gradient-to-r
-              from-[#4b145c]
-              via-[#6a1b7b]
-              to-[#3f0f4a]
+              from-[#020024]
+              via-[#090979]
+              to-[#00D4FF]
               bg-clip-text text-transparent
               transition-all duration-300
               group-hover:brightness-110
@@ -44,15 +48,12 @@ export default function Header() {
         </div>
 
         {/* DESKTOP NAV */}
-        <nav
-          className="hidden md:flex gap-8 font-medium text-[15px]"
-          style={{ color: "var(--nav-lavender)" }}
-        >
+        <nav className="hidden md:flex gap-8 font-medium text-[15px]">
           {[
             { name: "Home", href: "/" },
             { name: "About Us", href: "/about-us" },
             { name: "Previous Activities", href: "/previous-activities" },
-            { name: "Our Workshops", href: "/our-workshop" },
+            { name: "Latest Workshop", href: "/our-workshop" },
             { name: "Contact Us", href: "/contact" },
           ].map((item) => (
             <Link
@@ -60,11 +61,16 @@ export default function Header() {
               href={item.href}
               className="
                 relative
+                text-[#1e3a8a]
                 transition-all duration-300
+                hover:text-[#2563eb]
                 hover:-translate-y-0.5
                 after:absolute after:left-0 after:-bottom-1
                 after:h-[2px] after:w-0
-                after:bg-[#ac84b6]
+                after:bg-gradient-to-r
+                after:from-[#020024]
+                after:via-[#090979]
+                after:to-[#00D4FF]
                 after:transition-all after:duration-300
                 hover:after:w-full
               "
@@ -76,8 +82,12 @@ export default function Header() {
 
         {/* MOBILE MENU BUTTON */}
         <button
-          className="md:hidden text-3xl transition-transform duration-300 hover:scale-110"
-          style={{ color: "var(--nav-lavender)" }}
+          className="
+            md:hidden text-3xl
+            text-[#1e3a8a]
+            transition-transform duration-300
+            hover:scale-110
+          "
           onClick={() => setOpen(!open)}
           aria-label="Toggle Menu"
         >
@@ -85,7 +95,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* MOBILE MENU (Animated) */}
+      {/* MOBILE MENU */}
       <div
         className={`
           md:hidden overflow-hidden
@@ -94,18 +104,16 @@ export default function Header() {
         `}
       >
         <nav
-  className="
-    flex flex-col gap-4
-    px-6 pb-6
-    font-medium text-base
-    bg-[#fee4fe]/90
-    backdrop-blur-md
-    shadow-lg
-    animate-mobileMenu
-  "
-  style={{ color: "var(--nav-lavender)" }}
->
-
+          className="
+            flex flex-col gap-4
+            px-6 pb-6
+            font-medium text-base
+            bg-[#eaf0ff]/95
+            backdrop-blur-md
+            shadow-lg
+            animate-mobileMenu
+          "
+        >
           {[
             { name: "Home", href: "/" },
             { name: "About Us", href: "/about-us" },
@@ -117,9 +125,10 @@ export default function Header() {
               key={item.name}
               href={item.href}
               className="
-                py-2 border-b border-purple-200
+                py-2 border-b border-blue-200
+                text-[#1e3a8a]
                 transition-all duration-300
-                hover:pl-2 hover:text-[#ac84b6]
+                hover:pl-2 hover:text-[#2563eb]
               "
               onClick={() => setOpen(false)}
             >
@@ -128,7 +137,6 @@ export default function Header() {
           ))}
         </nav>
       </div>
-
     </header>
   );
 }

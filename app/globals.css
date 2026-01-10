@@ -23,13 +23,25 @@
    GLOBAL STYLES
 ================================ */
 body {
-  background-image: url("/bg-waves.png");
-  background-repeat: no-repeat;  
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
-  background-color: var(--background);
+  /* STATIC gradient */
+  background: linear-gradient(
+    to bottom,
+    #f8f9fa 10%,
+    #8fa8ff 50%,
+    #4f6ff2 100%
+  );
+
+
 }
+   /* background: linear-gradient(
+    180deg,
+    #2f4fd8 0%,
+    #4f6ff2 25%,
+    #6f8dff 45%,
+    #8fa8ff 65%,
+    #eef2ff 100% */
+
+
 /* ===============================
    HEADER ANIMATIONS
 ================================ */

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-10 overflow-hidden">
+    <footer className="relative mt-6 sm:mt-10 overflow-hidden">
 
       {/* DARK BLUE GRADIENT BACKGROUND */}
       <div
@@ -15,25 +15,26 @@ export default function Footer() {
         "
       />
 
-      {/* SOFT OVERLAY FOR DEPTH */}
+      {/* SOFT OVERLAY */}
       <div className="absolute inset-0 bg-black/10" />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-14 sm:py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 py-10 sm:py-16">
 
         {/* TOP GRID */}
         <div
           className="
             grid grid-cols-1 sm:grid-cols-3
-            gap-10 text-sm
+            gap-6 sm:gap-10
+            text-xs sm:text-sm
             text-white/90
-            text-center sm:text-center
+            text-center
           "
         >
 
           {/* ABOUT */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">
               Tech For Bharat
             </h3>
             <p className="leading-relaxed text-white/80">
@@ -44,10 +45,10 @@ export default function Footer() {
 
           {/* QUICK LINKS */}
           <div>
-            <h4 className="font-semibold mb-4 text-white">
+            <h4 className="font-semibold mb-3 sm:mb-4 text-white">
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-1.5 sm:space-y-2">
               {[
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about-us" },
@@ -73,10 +74,10 @@ export default function Footer() {
 
           {/* PROGRAMS */}
           <div>
-            <h4 className="font-semibold mb-4 text-white">
+            <h4 className="font-semibold mb-3 sm:mb-4 text-white">
               Programs
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-1.5 sm:space-y-2">
               <li>
                 <Link
                   href="/our-workshop"
@@ -111,14 +112,15 @@ export default function Footer() {
         </div>
 
         {/* DIVIDER */}
-        <div className="my-10 h-px bg-white/20" />
+        <div className="my-6 sm:my-10 h-px bg-white/20" />
 
         {/* BOTTOM BAR */}
         <div
           className="
             flex flex-col md:flex-row
             items-center justify-between
-            gap-4 text-sm
+            gap-3 sm:gap-4
+            text-[11px] sm:text-sm
             text-white/75
             text-center md:text-left
           "
@@ -129,7 +131,7 @@ export default function Footer() {
             Supporting <span className="font-medium text-white">Innovation</span> in Technology
           </p>
 
-          <p className="flex items-center gap-1">
+          <p className="flex items-center gap-1 justify-center">
             Made with
             <span className="text-red-400 animate-pulse inline-block">❤</span>
             for Tech For Bharat

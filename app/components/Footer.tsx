@@ -27,7 +27,7 @@ export default function Footer() {
             grid grid-cols-1 sm:grid-cols-3
             gap-10 text-sm
             text-white/90
-            text-center sm:text-left
+            text-center sm:text-center
           "
         >
 

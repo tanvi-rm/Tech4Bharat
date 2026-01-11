@@ -108,7 +108,7 @@ export default function AboutTechForBharat() {
       <div
         className="
           max-w-6xl mx-auto
-          bg-gradient-to-b from-[#edeef8] to-[#c5d1ff]
+          bg-gradient-to-b from-[#c5d1ff] to-[#edeef8]
           backdrop-blur-lg
           rounded-3xl shadow-xl
           px-6 sm:px-10 lg:px-12 py-16

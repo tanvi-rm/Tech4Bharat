@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-20 sm:mt-28 overflow-hidden">
+    <footer className="relative mt-10 overflow-hidden">
 
       {/* DARK BLUE GRADIENT BACKGROUND */}
       <div
